@@ -4,6 +4,8 @@
 - 매주 최소 5문제
 - 위에서부터 순서대로 풀기
 - 단, 이미 풀어본 문제면 다음 문제로 넘어가기
+- 각 문제 풀때 Fork한 repository main branch에서 sub branch 생성 후 풀기
+- 풀이 완료 후 해당 brnach PR 요청하기 (리뷰어 설정 필수)
 
 ### PR 제목
 - `baekjoon/문제번호/문제번호_이름.py`
