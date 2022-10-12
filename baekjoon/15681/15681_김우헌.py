@@ -35,10 +35,10 @@ for _ in range(N-1):
     graph[v].append(u)
 
 
-tree5 = dict()
-makeTree(tree5, R, -1)
+tree = dict()
+makeTree(tree, R, -1)
 size = [0 for _ in range(N+1)]
-countSubtreeNodes(size, tree5, R)
+countSubtreeNodes(size, tree, R)
 for _ in range(Q):
     u = int(input())
     print(size[u])
