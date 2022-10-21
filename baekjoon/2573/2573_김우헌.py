@@ -47,7 +47,6 @@ while True:
             if matrix[i][j] > 0:
                 # 빙산 발견시 빙산 탐색 및 녹이기
                 visit[i][j] = True
-                all_icebergs_melt = False
                 iceburg += 1
                 bfs(i, j)
     # 빙산이 두개 이상이라면 결과 출력 및 종료
