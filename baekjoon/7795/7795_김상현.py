@@ -1,8 +1,10 @@
 # 7795 먹을 것인가 먹힐 것인가 < 실버 3 >
 from sys import stdin
 from bisect import bisect_left
+
 def solution(A,B):
     answer = 0
+    # 이진 탐색 적용
     for a in A:
         answer += bisect_left(B,a)
     return answer
