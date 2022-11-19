@@ -1,5 +1,6 @@
 '''
-
+baekjoons s2 과자 나눠주기
+https://www.acmicpc.net/problem/16401
 '''
 
 import sys
@@ -11,6 +12,8 @@ def solution(M, snacks):
     end = max(snacks)
     while start <= end:
         mid = (start + end) // 2
+        if mid == 0:
+            break
         div = sum([snack // mid for snack in snacks])
         if div >= M:
             start = mid + 1
