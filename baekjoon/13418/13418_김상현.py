@@ -3,7 +3,8 @@ from sys import stdin
 
 def solution(N,edges):
 
-    maxFatigue, minFatigue = 0, N
+    # [0] 초기화
+    worstCourse, bestCourse = 0, N
     maxParent, minParent = [i for i in range(N+1)], [i for i in range(N+1)]
 
     # [1] Union & Find
@@ -23,17 +24,17 @@ def solution(N,edges):
             n1 = find(n1,minParent)
             n2 = find(n2,minParent)
             if n1 != n2:
-                minFatigue -= 1
+                bestCourse -= 1
                 union(n1, n2, minParent)
         # [2-2] 최악의 코스
         else:
             n1 = find(n1,maxParent)
             n2 = find(n2,maxParent)
             if n1 != n2:
-                maxFatigue += 1
+                worstCourse += 1
                 union(n1, n2, maxParent)
 
-    return maxFatigue**2 - minFatigue**2
+    return worstCourse**2 - bestCourse**2
 
 # input
 N, M = map(int,stdin.readline().split())
